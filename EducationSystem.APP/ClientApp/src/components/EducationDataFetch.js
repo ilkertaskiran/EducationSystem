@@ -52,7 +52,7 @@ export class EducationDataFetch extends Component {
     }
 
     async populateWeatherData() {
-        const response = await fetch('education');
+        const response = await fetch('education/get-educations');
         const data = await response.json();
         console.log("data", data);
         this.setState({ educations: data, loading: false });

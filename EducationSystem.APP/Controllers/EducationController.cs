@@ -17,6 +17,7 @@ namespace EducationSystem.APP.Controllers
         }
 
         [HttpGet]
+        [Route("get-educations")]
         public async Task<List<Education>> GetEducations()
         {
             var client = new RestClient("https://localhost:44346/get-educations");
