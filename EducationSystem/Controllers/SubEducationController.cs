@@ -16,7 +16,7 @@ namespace EducationSystem.API.Controllers
             _logger = logger;
         }
         /// <summary>
-        /// Adding education.
+        /// Add sub education.
         /// </summary>
         /// <returns></returns>
         [HttpPost("/add-sub-education")]
@@ -32,7 +32,7 @@ namespace EducationSystem.API.Controllers
         }
 
         /// <summary>
-        /// Adding education.
+        /// get sub education.
         /// </summary>
         /// <returns></returns>
         [HttpGet("/get-sub-education")]
@@ -46,7 +46,7 @@ namespace EducationSystem.API.Controllers
         }
 
         /// <summary>
-        /// Adding education.
+        /// Get sub education list.
         /// </summary>
         /// <returns></returns>
         [HttpGet("/get-sub-educations")]

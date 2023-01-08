@@ -16,7 +16,7 @@ namespace EducationSystem.API.Controllers
             _logger = logger;
         }
         /// <summary>
-        /// Adding education.
+        /// Add education.
         /// </summary>
         /// <returns></returns>
         [HttpPost("/add-education")]
@@ -32,7 +32,7 @@ namespace EducationSystem.API.Controllers
         }
 
         /// <summary>
-        /// Adding education.
+        /// Get education.
         /// </summary>
         /// <returns></returns>
         [HttpGet("/get-education")]
@@ -46,13 +46,27 @@ namespace EducationSystem.API.Controllers
         }
 
         /// <summary>
-        /// Adding education.
+        /// Get education list.
         /// </summary>
         /// <returns></returns>
         [HttpGet("/get-educations")]
         public async Task<ActionResult<List<EducationDto>>> GetEducations()
         {
             var result = await Mediator.Send(new GetEducationsDto());
+
+            //_logger.LogError(); log yapýsý kurulabilir
+
+            return Ok(result);
+        }
+
+        /// <summary>
+        /// Publish education.
+        /// </summary>
+        /// <returns></returns>
+        [HttpPut("/publish-education")]
+        public async Task<ActionResult<BaseResponse>> PublishEducation([FromBody] PublishEducationDto request)
+        {
+            var result = await Mediator.Send(request);
 
             //_logger.LogError(); log yapýsý kurulabilir
 
