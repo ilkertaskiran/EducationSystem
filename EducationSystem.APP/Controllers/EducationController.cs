@@ -19,12 +19,11 @@ namespace EducationSystem.APP.Controllers
         [HttpGet]
         public async Task<IActionResult> GetEducations()
         {
-            return StatusCode(StatusCodes.Status202Accepted);
-            //var client = new RestClient("/get-educations");
-            //var request = new RestRequest();
-            //var response = await client.GetAsync(request);
+            var client = new RestClient("https://localhost:44346/get-educations");
+            var request = new RestRequest();
+            var response = await client.GetAsync(request);
 
-            //return StatusCode(StatusCodes.Status200OK, response);
+            return StatusCode(StatusCodes.Status200OK, response);
         }
     }
 }
