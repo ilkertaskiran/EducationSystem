@@ -14,11 +14,26 @@ export class EducationDataFetch extends Component {
 
     static renderEducationsTable(educations) {
         return (
-            <div>
-                <h1 id="tabelLabel" >Weather forecast</h1>
-                <p>This component demonstrates fetching data from the server.</p>
-                {educations}
-            </div>
+            <table className='table table-striped' aria-labelledby="tabelLabel">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Temp. (C)</th>
+                        <th>Temp. (F)</th>
+                        <th>Summary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {educations.map(education =>
+                        <tr key={education.id}>
+                            <td>{education.id}</td>
+                            <td>{education.name}</td>
+                            <td>{education.name}</td>
+                            <td>{education.name}</td>
+                        </tr>
+                    )}
+                </tbody>
+            </table>
         );
     }
 
@@ -39,6 +54,7 @@ export class EducationDataFetch extends Component {
     async populateWeatherData() {
         const response = await fetch('education');
         const data = await response.json();
+        console.log("data", data);
         this.setState({ educations: data, loading: false });
     }
 }

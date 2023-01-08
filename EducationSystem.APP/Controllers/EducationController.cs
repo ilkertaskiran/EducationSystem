@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using RestSharp.Authenticators;
+﻿using EducationSystem.APP.Models;
+using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using RestSharp;
-using System.Threading;
 
 namespace EducationSystem.APP.Controllers
 {
@@ -17,13 +17,18 @@ namespace EducationSystem.APP.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetEducations()
+        public async Task<List<Education>> GetEducations()
         {
             var client = new RestClient("https://localhost:44346/get-educations");
             var request = new RestRequest();
             var response = await client.GetAsync(request);
 
-            return StatusCode(StatusCodes.Status200OK, response);
+            //JsonConvert.DeserializeObject<RootObject>(json);
+
+            List<Education> educationList = JsonConvert.DeserializeObject<List<Education>>(response.Content);
+
+
+            return educationList;
         }
     }
 }
