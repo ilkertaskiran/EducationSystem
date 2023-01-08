@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLayer.Dto", "Dto\Bu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLayer.Client", "BusinessLayer.Access\BusinessLayer.Client.csproj", "{E34337AD-F3B4-4DBE-9C95-E3C49DBABB57}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{F481ABD7-FCB2-45A2-80A9-0D29B96B1FD3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\DataAccess.csproj", "{F481ABD7-FCB2-45A2-80A9-0D29B96B1FD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EducationSystem.WEB", "EducationSystem.WEB\EducationSystem.WEB.csproj", "{625A7DD8-B12A-4CDD-AB95-C8687CC55CD4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{F481ABD7-FCB2-45A2-80A9-0D29B96B1FD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F481ABD7-FCB2-45A2-80A9-0D29B96B1FD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F481ABD7-FCB2-45A2-80A9-0D29B96B1FD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{625A7DD8-B12A-4CDD-AB95-C8687CC55CD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{625A7DD8-B12A-4CDD-AB95-C8687CC55CD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{625A7DD8-B12A-4CDD-AB95-C8687CC55CD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{625A7DD8-B12A-4CDD-AB95-C8687CC55CD4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
