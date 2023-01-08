@@ -1,4 +1,5 @@
 using BusinessLayer.Commands;
+using BusinessLayer.Queries;
 using DataLayer;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -16,6 +17,7 @@ AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 
 //builder.Services.AddMediatR(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddMediatR(typeof(CreateEducationHandler).GetTypeInfo().Assembly);
+builder.Services.AddMediatR(typeof(GetEducationHandler).GetTypeInfo().Assembly);
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 //builder.Services.AddAutoMapper(typeof(Program));
