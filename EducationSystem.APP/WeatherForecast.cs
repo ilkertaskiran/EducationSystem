@@ -1,4 +1,4 @@
-namespace EducationSystem.WEB
+namespace EducationSystem.APP
 {
     public class WeatherForecast
     {

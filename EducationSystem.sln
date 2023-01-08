@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLayer.Client", "Bus
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\DataAccess.csproj", "{F481ABD7-FCB2-45A2-80A9-0D29B96B1FD3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EducationSystem.WEB", "EducationSystem.WEB\EducationSystem.WEB.csproj", "{625A7DD8-B12A-4CDD-AB95-C8687CC55CD4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EducationSystem.APP", "EducationSystem.APP\EducationSystem.APP.csproj", "{1D476CDC-E829-4267-A02E-B52A13688CD1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,10 +47,10 @@ Global
 		{F481ABD7-FCB2-45A2-80A9-0D29B96B1FD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F481ABD7-FCB2-45A2-80A9-0D29B96B1FD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F481ABD7-FCB2-45A2-80A9-0D29B96B1FD3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{625A7DD8-B12A-4CDD-AB95-C8687CC55CD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{625A7DD8-B12A-4CDD-AB95-C8687CC55CD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{625A7DD8-B12A-4CDD-AB95-C8687CC55CD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{625A7DD8-B12A-4CDD-AB95-C8687CC55CD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D476CDC-E829-4267-A02E-B52A13688CD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D476CDC-E829-4267-A02E-B52A13688CD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D476CDC-E829-4267-A02E-B52A13688CD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D476CDC-E829-4267-A02E-B52A13688CD1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

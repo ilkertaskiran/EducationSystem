@@ -3,15 +3,15 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:23069",
+      "applicationUrl": "http://localhost:40849",
       "sslPort": 0
     }
   },
   "profiles": {
-    "EducationSystem.WEB": {
+    "EducationSystem.APP": {
       "commandName": "Project",
       "launchBrowser": true,
-      "applicationUrl": "http://localhost:5102",
+      "applicationUrl": "http://localhost:5086",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
         "ASPNETCORE_HOSTINGSTARTUPASSEMBLIES": "Microsoft.AspNetCore.SpaProxy"
