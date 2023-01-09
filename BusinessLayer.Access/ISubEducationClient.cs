@@ -8,8 +8,9 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Client
 {
-    public interface ISubEducationProgramClient
+    public interface ISubEducationClient
     {
+        // This interface wrote for nuGet packages but not used now
         [Get("/get-sub-education")]
         Task<ApiResponse<SubEducationDto>> GetSubEducation(int subEducationId);
 

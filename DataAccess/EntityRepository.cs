@@ -5,6 +5,7 @@ using System.Linq.Expressions;
 namespace DataAccess
 {
     public class EfEntitiyRepositoryBase<TEntitiy, TContext> : IEntitiyRepository<TEntitiy>
+        //This class is not used for now
          where TEntitiy : class, new()
          where TContext : AppDbContext, new()
     {
