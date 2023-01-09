@@ -20,8 +20,8 @@ namespace EducationSystem.APP.Controllers
         [Route("get-sub-educations-by-id")]
         public async Task<List<SubEducation>> GetSubEducations(int id)
         {
-            var client = new RestClient("https://localhost:44346/get-sub-education");
-            var request = new RestRequest().AddParameter("id", id); ;
+            var client = new RestClient("https://localhost:44346/get-sub-educations");
+            var request = new RestRequest().AddParameter("EducationId", id); ;
             var response = await client.GetAsync(request);
 
             //JsonConvert.DeserializeObject<RootObject>(json);

@@ -32,7 +32,7 @@ export class SubEducationDataFetch extends Component {
                             <td>{subEducation.id}</td>
                             <td>{subEducation.name}</td>
                             <td>{subEducation.description}</td>
-                            <td>{subEducation.url}</td>
+                            <td><a href={subEducation.url} target="_blank">{subEducation.url}</a></td>
                             <td>{subEducation.createdTime}</td>
                             <td>{subEducation.updatedTime}</td>
                         </tr>
@@ -56,8 +56,8 @@ export class SubEducationDataFetch extends Component {
     }
 
     async getSubEducations() {
-        console.log("getSubEducations start of func");
-        const response = await fetch('subEducation/get-sub-educations-by-id');
+        var educationId = new URLSearchParams(window.location.search).get("id")
+        const response = await fetch('subEducation/get-sub-educations-by-id?id=' + educationId);
         const data = await response.json();
         console.log("data", data);
         this.setState({ subEducations: data, loading: false });

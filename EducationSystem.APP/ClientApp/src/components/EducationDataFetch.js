@@ -1,8 +1,4 @@
 import React, { Component } from 'react';
-import {
-    Link, Route, Routes
-} from "react-router-dom";
-import { SubEducationDataFetch } from "./SubEducationDataFetch";
 
 export class EducationDataFetch extends Component {
     static displayName = EducationDataFetch.name;
@@ -22,9 +18,7 @@ export class EducationDataFetch extends Component {
         function handleRowClick(id) {
             console.log("clicked", id);
             //get-sub-educations-by-id
-            window.location.href = "/get-sub-educations-by-id";
-
-
+            window.location.href = "/get-sub-educations-by-id?id=" + id;
         }
 
 
