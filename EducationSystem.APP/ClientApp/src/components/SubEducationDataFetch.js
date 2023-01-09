@@ -9,7 +9,7 @@ export class SubEducationDataFetch extends Component {
     }
 
     componentDidMount() {
-        this.populateWeatherData();
+        this.getSubEducations();
     }
 
 
@@ -55,7 +55,8 @@ export class SubEducationDataFetch extends Component {
         );
     }
 
-    async populateWeatherData() {
+    async getSubEducations() {
+        console.log("getSubEducations start of func");
         const response = await fetch('subEducation/get-sub-educations-by-id');
         const data = await response.json();
         console.log("data", data);
