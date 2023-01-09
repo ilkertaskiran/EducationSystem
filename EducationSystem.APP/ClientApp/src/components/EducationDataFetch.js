@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Route } from 'react-router-dom'
 
 export class EducationDataFetch extends Component {
     static displayName = EducationDataFetch.name;
@@ -12,24 +13,35 @@ export class EducationDataFetch extends Component {
         this.populateWeatherData();
     }
 
+
     static renderEducationsTable(educations) {
+
+        function handleRowClick(id) {
+            console.log("clicked", id);
+        }
         return (
             <table className='table table-striped' aria-labelledby="tabelLabel">
                 <thead>
                     <tr>
-                        <th>Date</th>
-                        <th>Temp. (C)</th>
-                        <th>Temp. (F)</th>
-                        <th>Summary</th>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Publish Status</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                        <th>Created Time</th>
+                        <th>Updated Time</th>
                     </tr>
                 </thead>
                 <tbody>
                     {educations.map(education =>
-                        <tr key={education.id}>
+                        <tr key={education.id} onClick={() => handleRowClick(education.id)}>
                             <td>{education.id}</td>
                             <td>{education.name}</td>
-                            <td>{education.name}</td>
-                            <td>{education.name}</td>
+                            <td>{education.isPublished ? "Published" : "-"}</td>
+                            <td>{education.startDate}</td>
+                            <td>{education.endDate}</td>
+                            <td>{education.createdTime}</td>
+                            <td>{education.updatedTime}</td>
                         </tr>
                     )}
                 </tbody>
@@ -44,8 +56,7 @@ export class EducationDataFetch extends Component {
 
         return (
             <div>
-                <h1 id="tabelLabel" >Weather forecast</h1>
-                <p>This component demonstrates fetching data from the server.</p>
+                <h1 id="tabelLabel" >Educations</h1>
                 {contents}
             </div>
         );

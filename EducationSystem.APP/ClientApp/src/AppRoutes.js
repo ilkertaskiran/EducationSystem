@@ -1,24 +1,19 @@
-import { Counter } from "./components/Counter";
-import { FetchData } from "./components/FetchData";
 import { EducationDataFetch } from "./components/EducationDataFetch";
-import { Home } from "./components/Home";
+import { SubEducationDataFetch } from "./components/SubEducationDataFetch";
 
 const AppRoutes = [
     {
         index: true,
-        element: <Home />
-    },
-    {
-        path: '/counter',
-        element: <Counter />
-    },
-    {
-        path: '/fetch-data',
-        element: <FetchData />
-    },
-    {
-        path: '/education-fetch-data',
+        path: '/',
         element: <EducationDataFetch />
+    },
+    {
+        path: '/get-educations',
+        element: <EducationDataFetch />
+    },
+    {
+        path: '/get-sub-educations-by-id',
+        element: <SubEducationDataFetch />
     }
 ];
 
