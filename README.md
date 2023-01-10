@@ -1,6 +1,6 @@
 # Education System
 
-Education system project includes that 1 WebAPI project and 1 React SPA project.
+Education system project includes that 1 WebAPI project and 1 React SPA project. Code first approach was used to develop data layer of project.
 
 ## Installation
 
