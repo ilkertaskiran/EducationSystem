@@ -6,19 +6,46 @@ Education system project includes that 1 WebAPI project and 1 React SPA project.
 
 Use the docker console to create education database.
 
-bash
-docker run --hostname=4b8c7c22b831 --mac-address=02:42:ac:11:00:02 --env=POSTGRES_PASSWORD=edu123 --env=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/postgresql/15/bin --env=GOSU_VERSION=1.14 --env=LANG=en_US.utf8 --env=PG_MAJOR=15 --env=PG_VERSION=15.1-1.pgdg110+1 --env=PGDATA=/var/lib/postgresql/data --volume=/var/lib/postgresql/data -p 5432:5432 --restart=no --runtime=runc -d postgres
+```bash
+docker run --name education-db -e POSTGRES_PASSWORD=edu123 -d -p 5432:5432 -v $HOME/docker/volumes/postgres:/var/lib/postgresql/data postgres
 
 
+```
+
+## Data Scripts - DML
+```bash
+INSERT INTO public."Education"
+("Id", "Name", "StartDate", "EndDate", "CreatedTime", "UpdatedTime", "IsPublished")
+VALUES(1, 'Java', '2023-01-07 23:34:57.686', '2023-01-07 23:34:57.686', '2023-01-07 23:34:57.686', '2023-01-07 23:34:57.687', false);
+INSERT INTO public."Education"
+("Id", "Name", "StartDate", "EndDate", "CreatedTime", "UpdatedTime", "IsPublished")
+VALUES(2, 'HTML', '2023-01-07 21:32:35.925', '2023-01-07 21:32:35.925', '2023-01-07 21:32:35.925', '2023-01-07 21:32:35.925', false);
+INSERT INTO public."Education"
+("Id", "Name", "StartDate", "EndDate", "CreatedTime", "UpdatedTime", "IsPublished")
+VALUES(3, '.NET', '2023-01-07 21:48:57.631', '2023-01-07 21:48:57.631', '2023-01-07 21:48:57.631', '2023-01-07 21:48:57.631', true);
 
 
+INSERT INTO public."SubEducation"
+("Id", "EducationId", "Name", "Description", "Url", "CreatedTime", "UpdatedTime")
+VALUES(4, 1, 'Java Lesson 1 ', 'Java Education', 'https://www.youtube.com/watch?v=eZu3IUN1hAI', '2023-01-07 21:48:57.631', '2023-01-07 21:48:57.631');
+INSERT INTO public."SubEducation"
+("Id", "EducationId", "Name", "Description", "Url", "CreatedTime", "UpdatedTime")
+VALUES(5, 1, 'Java Lesson 2', 'Java Education', 'https://www.youtube.com/watch?v=eZu3IUN1hAI', '2023-01-07 21:48:57.631', '2023-01-07 21:48:57.631');
+INSERT INTO public."SubEducation"
+("Id", "EducationId", "Name", "Description", "Url", "CreatedTime", "UpdatedTime")
+VALUES(8, 2, 'HTML Lesson 1', 'Html Education', 'https://www.youtube.com/watch?v=eZu3IUN1hAI', '2023-01-07 21:48:57.631', '2023-01-07 21:48:57.631');
+INSERT INTO public."SubEducation"
+("Id", "EducationId", "Name", "Description", "Url", "CreatedTime", "UpdatedTime")
+VALUES(9, 2, 'HTML Lesson 1', 'Html Education', 'https://www.youtube.com/watch?v=eZu3IUN1hAI', '2023-01-07 21:48:57.631', '2023-01-07 21:48:57.631');
+INSERT INTO public."SubEducation"
+("Id", "EducationId", "Name", "Description", "Url", "CreatedTime", "UpdatedTime")
+VALUES(6, 3, '.NET Lesson 1', '.NET Education', 'https://www.youtube.com/watch?v=eZu3IUN1hAI', '2023-01-07 21:48:57.631', '2023-01-07 21:48:57.631');
+INSERT INTO public."SubEducation"
+("Id", "EducationId", "Name", "Description", "Url", "CreatedTime", "UpdatedTime")
+VALUES(7, 3, '.NET Lesson 2', '.NET Education', 'https://www.youtube.com/watch?v=eZu3IUN1hAI', '2023-01-07 21:48:57.631', '2023-01-07 21:48:57.631');
+INSERT INTO public."SubEducation"
+("Id", "EducationId", "Name", "Description", "Url", "CreatedTime", "UpdatedTime")
+VALUES(10, 1, '.NET Lesson 2', '.NET Education', 'https://www.youtube.com/watch?v=eZu3IUN1hAI', '2023-01-07 21:48:57.631', '2023-01-07 21:48:57.631');
 
-
-
-
-
-Ilker Kaan Taskiran
-
-
-
+```
 
