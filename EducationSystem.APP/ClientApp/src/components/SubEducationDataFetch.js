@@ -59,7 +59,6 @@ export class SubEducationDataFetch extends Component {
         var educationId = new URLSearchParams(window.location.search).get("id")
         const response = await fetch('subEducation/get-sub-educations-by-id?id=' + educationId);
         const data = await response.json();
-        console.log("data", data);
         this.setState({ subEducations: data, loading: false });
     }
 }

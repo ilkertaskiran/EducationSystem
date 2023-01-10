@@ -6,7 +6,7 @@ namespace DataLayer
     public class AppDbContext : DbContext
     {
 
-        public DbSet<Education> Education { get; set; }
+        public virtual DbSet<Education> Education { get; set; }
         public DbSet<SubEducation> SubEducation { get; set; }
         //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         //{

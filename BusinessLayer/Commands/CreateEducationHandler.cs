@@ -33,6 +33,12 @@ namespace BusinessLayer.Commands
             //    Status = "Published"
             //};
 
+            var today = DateTime.Now;
+
+            if(today >= education.StartDate && today <= education.EndDate) 
+                education.IsPublished= true;
+            else
+                education.IsPublished= false;
 
             _dbContext.Education.Add(education);
             dbResult = _dbContext.SaveChanges();

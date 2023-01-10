@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
 
 export class EducationDataFetch extends Component {
     static displayName = EducationDataFetch.name;
@@ -15,10 +16,11 @@ export class EducationDataFetch extends Component {
 
     static renderEducationsTable(educations) {
 
-        function handleRowClick(id) {
-            console.log("clicked", id);
-            //get-sub-educations-by-id
-            window.location.href = "/get-sub-educations-by-id?id=" + id;
+        function handleRowClick(id, isPublished) {
+            if (!isPublished)
+                alert("This education has not published.");
+            else
+                window.location.href = "/get-sub-educations-by-id?id=" + id;
         }
 
 
@@ -33,11 +35,12 @@ export class EducationDataFetch extends Component {
                         <th>End Date</th>
                         <th>Created Time</th>
                         <th>Updated Time</th>
+                        {/*<th></th>*/}
                     </tr>
                 </thead>
                 <tbody>
                     {educations.map(education =>
-                        <tr key={education.id} onClick={() => handleRowClick(education.id)}>
+                        <tr key={education.id} onClick={() => handleRowClick(education.id, education.isPublished)}>
                             <td>{education.id}</td>
                             <td>{education.name}</td>
                             <td>{education.isPublished ? "Published" : "-"}</td>
@@ -45,6 +48,7 @@ export class EducationDataFetch extends Component {
                             <td>{education.endDate}</td>
                             <td>{education.createdTime}</td>
                             <td>{education.updatedTime}</td>
+                            {/*<td>{!education.isPublished ? <Link to="/signup" className="btn btn-danger">Publish</Link> : ""}</td>*/}
                         </tr>
                     )}
                 </tbody>
@@ -60,6 +64,7 @@ export class EducationDataFetch extends Component {
         return (
             <div>
                 <h1 id="tabelLabel" >Educations</h1>
+                <Link to="/add-education" className="btn btn-warning" id="addButton">Add Education</Link>
                 {contents}
             </div>
         );
@@ -68,7 +73,7 @@ export class EducationDataFetch extends Component {
     async populateWeatherData() {
         const response = await fetch('education/get-educations');
         const data = await response.json();
-        console.log("data", data);
+
         this.setState({ educations: data, loading: false });
     }
 }

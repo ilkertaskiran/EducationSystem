@@ -1,5 +1,6 @@
 import { EducationDataFetch } from "./components/EducationDataFetch";
 import { SubEducationDataFetch } from "./components/SubEducationDataFetch";
+import { AddEducationDataFetch } from "./components/AddEducationDataFetch";
 
 const AppRoutes = [
     {
@@ -14,6 +15,10 @@ const AppRoutes = [
     {
         path: '/get-sub-educations-by-id',
         element: <SubEducationDataFetch />
+    },
+    {
+        path: '/add-education',
+        element: <AddEducationDataFetch />
     }
 ];
 
