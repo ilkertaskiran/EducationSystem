@@ -19,8 +19,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EducationSystem.APP", "Educ
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EducationSystem.TEST", "EducationSystem.TEST\EducationSystem.TEST.csproj", "{8323D13F-F883-469B-A963-E6DE06A6A868}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdgeDriverTest1", "EdgeDriverTest1\EdgeDriverTest1.csproj", "{7C90C936-D720-4657-A139-FFE247F28B31}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,10 +57,6 @@ Global
 		{8323D13F-F883-469B-A963-E6DE06A6A868}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8323D13F-F883-469B-A963-E6DE06A6A868}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8323D13F-F883-469B-A963-E6DE06A6A868}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7C90C936-D720-4657-A139-FFE247F28B31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7C90C936-D720-4657-A139-FFE247F28B31}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7C90C936-D720-4657-A139-FFE247F28B31}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7C90C936-D720-4657-A139-FFE247F28B31}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
